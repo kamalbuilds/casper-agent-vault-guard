@@ -125,10 +125,3 @@ Use this template during demos and QA runs to capture the proof-first loop:
 ## Casper primitives
 
 Odra smart contract, CSPR.click wallet flow, CSPR.cloud event reads.
-
-## Docs
-
-- [PRD](PRD.md)
-- [Build Plan](BUILD_PLAN.md)
-- [Demo and Submission](DEMO_AND_SUBMISSION.md)
-- [Risk Register](RISK_REGISTER.md)
