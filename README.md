@@ -44,6 +44,22 @@ casper-client put-transaction session \
 
 Record the contract hash from the deploy result and set it in env files below.
 
+### 2a. Deploy verification checklist
+
+After submitting the install transaction, verify execution before moving to agent/web:
+
+```bash
+casper-client get-transaction \
+  --node-address https://node.testnet.cspr.cloud/rpc \
+  <TXN_HASH>
+```
+
+Deployment is ready when:
+
+- `execution_result` is successful
+- a contract hash appears in transforms/named keys
+- the hash is copied to `CONTRACT_HASH` in both `agent/.env` and `web/.env.local`
+
 ### 3. Agent backend
 
 ```bash
@@ -95,6 +111,16 @@ npm run dev
 3. User describes a spend intent; agent parses and checks off-chain policy.
 4. Agent builds `agent_pay` via casper-js-sdk and submits (if `AGENT_SECRET_KEY_PATH` is set).
 5. Proof table shows `PaymentExecuted` events from CSPR.cloud.
+
+## Proof table template
+
+Use this template during demos and QA runs to capture the proof-first loop:
+
+| Timestamp (UTC) | Network | Contract Hash | Txn Hash | Agent Key | Recipient/Target | Amount (motes) | Purpose Hash | Policy Result | Event Status |
+|-----------------|---------|---------------|----------|-----------|------------------|----------------|--------------|---------------|--------------|
+|                 |         |               |          |           |                  |                |              |               |              |
+|                 |         |               |          |           |                  |                |              |               |              |
+|                 |         |               |          |           |                  |                |              |               |              |
 
 ## Casper primitives
 
