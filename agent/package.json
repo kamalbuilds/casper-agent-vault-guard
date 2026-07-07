@@ -1,0 +1,37 @@
+{
+  "name": "agent-vault-guard-agent",
+  "version": "1.0.0",
+  "description": "Backend agent for AgentVault Guard - AI-powered policy enforcement for Casper",
+  "main": "dist/server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "start": "node dist/server.js",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "cli": "tsx src/cli.ts",
+    "test:policy": "tsx scripts/test-policy.ts"
+  },
+  "keywords": [
+    "casper",
+    "agent",
+    "policy",
+    "ai",
+    "vault"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^20.10.0",
+    "casper-js-sdk": "5.0.12",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "openai": "6.45.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "typescript": "^5.3.3",
+    "tsx": "^4.7.0"
+  }
+}

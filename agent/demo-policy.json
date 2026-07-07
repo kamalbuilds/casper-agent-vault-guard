@@ -1,0 +1,14 @@
+{
+  "agent": "01abcdef1234567890abcdef1234567890abcdef1234567890abcdef12345678",
+  "maxPerTx": "1000000000000",
+  "dailyCap": "5000000000000",
+  "allowedTarget": "01fedcba0987654321fedcba0987654321fedcba0987654321fedcba09876543",
+  "expiry": 9999999999,
+  "purposes": [
+    "hosting_payment",
+    "vendor_payment",
+    "service_fee"
+  ],
+  "createdAt": 1688169600000,
+  "description": "Demo policy: max 1000 CSPR per tx, 5000 CSPR daily cap, allowed purposes for vendor payments"
+}

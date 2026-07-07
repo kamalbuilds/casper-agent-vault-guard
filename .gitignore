@@ -1,15 +1,29 @@
 # Dependencies
 node_modules/
-dist/
-.next/
-.env
-.env.local
-.env.*.local
 
 # Rust / Odra
 target/
 wasm/
+**/wasm/*.wasm
 
-# OS / IDE
+# Next.js
+.next/
+out/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# OS / editor
 .DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Logs
 *.log
+npm-debug.log*
+
+# TypeScript build output
+dist/
