@@ -1,0 +1,35 @@
+import type { Metadata } from "next";
+import { IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
+import { WalletProvider } from "@/components/WalletProvider";
+import "./globals.css";
+
+const plexSans = IBM_Plex_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-plex-sans",
+});
+
+const plexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-plex-mono",
+});
+
+export const metadata: Metadata = {
+  title: "AgentVault Guard",
+  description: "AI agents can spend, but cannot steal.",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body className={`${plexSans.variable} ${plexMono.variable}`}>
+        <WalletProvider>{children}</WalletProvider>
+      </body>
+    </html>
+  );
+}
