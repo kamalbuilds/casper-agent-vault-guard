@@ -1,10 +1,8 @@
 # AgentVault Guard
 
-**AI agents can spend, but cannot steal.**
+**AI agents can spend, but cannot steal from the users.**
 
 AgentVault Guard is a scoped spending-policy vault for autonomous AI agents on the Casper blockchain. Owners grant agent keys limited permissions with per-transaction caps, daily limits, allowed recipients, expiry, and purpose hashes. Every payment is enforced on-chain and emits an auditable receipt. Built with the Odra 2.8.2 framework for Casper 2.0.
-
-**Repository:** [github.com/kamalbuilds/casper-agent-vault-guard](https://github.com/kamalbuilds/casper-agent-vault-guard)
 
 ---
 
@@ -291,7 +289,6 @@ MIT License. See [LICENSE](./LICENSE) for details.
 
 ## Links
 
-- **GitHub**: [passionate-dev7/casper-agent-vault-guard](https://github.com/passionate-dev7/casper-agent-vault-guard)
 - **Testnet Explorer**: [cspr.live](https://testnet.cspr.live)
 - **Package**: [AgentVault on testnet](https://testnet.cspr.live/package/hash-6ccaa68fd5240f462ecd8c202182e60812b7971fca8049842c9b1b90ec9e00f4)
 - **Casper Documentation**: [docs.casper.network](https://docs.casper.network)
